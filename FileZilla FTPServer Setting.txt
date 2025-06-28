@@ -1,19 +1,28 @@
-1.Server --> Configuration --> Protocols settings -->  FTPS --> Passive mode
-    >Use custom port range: From 5000 To 50009
-    #reserve 10 ports to allow 10 users to use ftp at the same time.
-    [img1]
+### 1. FTPS Server Configuration
 
-    >Public IP or hostname:Retrieve public IP
-    [img2]
+- **Passive Mode Port Range**  
+  Set: From `50000` To `50009`  
+  👉 *Reserves 10 ports so 10 users can connect simultaneously*  
+  ![Passive mode Settings](images/Passive mode Settings.jpg)
 
-    >Rights managements --> Users --> Add(username/password) --> Mount point(Vitual/Native path)
-    #Vitual Path is directory name you define, Native path is the actual path in you FTP server.
-    [img3]
+- **Public IP**  
+  Set to: *Retrieve public IP automatically*  
+  ![Passive mode Settings](images/Passive mode Settings.jpg)
 
-2.Internal FTP connection Test
-    >Use WinSCP/FileZilla FTP Client to test: 127.0.0.1 or internal IP
-    [img4]
-    #127.0.0.1(loopback IP) can be used only on the FTP server itself.
-    
-    >Confirm the you can connect to the FTP server
-    [img5]
+- **User Configuration**  
+  Add username/password, then set Mount Point  
+  👉 *Virtual Path = Folder name shown to client*  
+  👉 *Native Path = Actual file system path*  
+  ![User Add Settings](images/User Add Settings.jpg)
+
+---
+
+### 2. Internal FTP Connection Test
+
+- **Clients:** Use WinSCP / FileZilla  
+  Connect to: `127.0.0.1` or local IP  
+  👉 *127.0.0.1 = loopback, usable only on server*  
+  ![Local Test](images/ftp4.png)
+
+- **Confirm Connection**  
+  ![Connection Confirmed](images/ftp5.png)
